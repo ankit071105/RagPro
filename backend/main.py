@@ -28,7 +28,7 @@ from kaggle_loader import load_kaggle_dataset
 
 app = FastAPI(title="SmartRAG Pro API", version="1.0.0")
 
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
+app.add_middleware(CORSMiddleware, allow_origins=["https://rag-pro-three.vercel.app", "http://localhost:3000", "http://localhost:8000", "*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 @app.on_event("startup")
 async def startup():
