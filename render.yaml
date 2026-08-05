@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: smartrag-pro
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile
+      - key: EMBED_MODEL
+        value: all-MiniLM-L6-v2
+      - key: CHROMA_PATH
+        value: ./chroma_db
+      - key: SQLITE_PATH
+        value: ./smart_rag.db
+      - key: MAX_CHUNK_SIZE
+        value: "1000"
+      - key: CHUNK_OVERLAP
+        value: "200"
+      - key: TOP_K_RESULTS
+        value: "5"
