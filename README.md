@@ -12,6 +12,11 @@ Built for Celebal Technologies Internship (CEI 2026)
 
 
 
+## Demonstration Video
+
+
+https://github.com/user-attachments/assets/19e8a323-fa78-409d-8b83-bd734e6f7efd
+
 
 
 
