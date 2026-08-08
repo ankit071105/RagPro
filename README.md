@@ -1,7 +1,19 @@
-# SmartRAG Pro 🧠
+# SmartRAG Pro 
 **Document Intelligence Platform — RAG-Based AI Assistant**
 
 Built for Celebal Technologies Internship (CEI 2026)
+
+
+Deployed: https://rag-pro-three.vercel.app/ 
+
+PPT LINK :- [SmartRAG_Pro.pdf](https://github.com/user-attachments/files/30853862/SmartRAG_Pro.pdf)
+
+
+
+
+
+
+
 
 ---
 
