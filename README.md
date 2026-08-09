@@ -88,47 +88,6 @@ python3 -m http.server 3000
 
 ---
 
-## Deploy on Render (Free Tier)
-
-1. Push repo to GitHub
-2. Go to render.com → New Web Service → Connect repo
-3. Set these:
-
-| Field | Value |
-|---|---|
-| Root Directory | `backend` |
-| Build Command | `pip install -r requirements.txt` |
-| Start Command | `uvicorn main:app --host 0.0.0.0 --port $PORT` |
-
-4. Add Environment Variables in Render dashboard:
-
-| Key | Value |
-|---|---|
-| `GROQ_API_KEY` | your key from console.groq.com |
-| `PYTHON_VERSION` | `3.11.9` |
-| `GROQ_MODEL` | `llama-3.3-70b-versatile` |
-| `CHROMA_PATH` | `/tmp/chroma_db` |
-| `DB_PATH` | `/tmp/smart_rag.db` |
-
-> **Note:** Render free tier has 512MB RAM. Do not add sentence-transformers — use ChromaDB built-in embeddings only.
-
----
-
-## Deploy Frontend on Vercel
-
-1. Go to vercel.com → New Project → Import GitHub repo
-2. Set root directory to `/` (project root)
-3. Vercel will detect `index.html` automatically
-4. Update API URL in `index.html`:
-```javascript
-const API = (location.hostname === 'localhost')
-  ? 'http://localhost:8000'
-  : 'https://your-render-url.onrender.com';
-```
-
-
----
-
 ##  Project Structure
 ```
 SmartRAG-Pro/
